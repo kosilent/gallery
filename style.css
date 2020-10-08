@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
  body{
   background-image: url(images/indexpage.jpg);
   background-size: auto;
@@ -9,24 +10,26 @@
   }
 
 h1 {
-  margin-left: 8vw;
   margin-top: 25vh;
   margin-bottom: 0px;
+  margin-left: 10vw;
   font-weight: lighter;
   color: white;
   font-family: 'Abril Fatface', cursive;
-  font-size: 5rem;
+  font-size: 4.5rem;
   animation: text2 1s 1;
+  white-space:nowrap;
 }
 
 p {
-  margin-left: 10vw;
+  margin-left: 10%;
   color: black;
   font-family: 'Nanum Myeongjo', serif;
   /*line-height: 1.4;*/
-  font-size: 1.5vw;
+  font-size: 1.2rem;
   /*text-shadow: 1px 0.5px 0.5px gray;*/
   animation: fadein 3s;
+  white-space:nowrap;
 
 }
 
@@ -36,6 +39,7 @@ p {
   }
   100% {margin-top: 25vh;
 }
+
 }
 
 .textShadow {
@@ -49,9 +53,6 @@ p {
 }
 
 
-
-
-
 @keyframes fadein {
     from {
         opacity:0;
@@ -63,20 +64,28 @@ p {
 
 .main-nav{
   display: flex;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   text-transform: uppercase;
   margin-top: 54px;
-  margin-right: 10vw;
   list-style: none;
+  flex-wrap: nowrap;
+  margin-right: 0;
+}
+
+.page-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-right: 0;
 }
 
 .main-nav li {
-  margin-left: 3rem;
-  margin-right: auto;
+  margin-left: 3vw;
 }
 .main-nav a {
   color: black;
   font-weight: bold;
+
 }
 .main-nav a:hover {
   color: #0bd;
@@ -84,10 +93,11 @@ p {
 
 
 .wrapper{
-  max-width: 1rem;
-  margin-left: 53vw;
-  margin-right: 7vw;
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 4%;
 }
+
 
 /*  바이오그래 ----------------------------- */
 .textShadow1  {
@@ -109,8 +119,6 @@ p {
   100% {margin-top: 0vw;
   }
 }
-
-
 
 
 .Biographytitle{
@@ -149,19 +157,30 @@ p {
     padding-right: 10%
 }
 
+/*
+
+img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+  box-sizing: border-box;
+}
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    grid-auto-rows: 200px 200px;
-
+    column-count: 4;
+    column-width: 200px;
+    column-gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #b6d068;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .25);
 }
-
-.item{
-
-}
-
+Artworks */
 
 
 
@@ -175,4 +194,39 @@ footer p {
   margin-top: 15vw;
   font-size: 1rem;
   color: white;
+}
+
+
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+/* 모바일 버전 */
+@media (max-width: 600px) {
+
+h1{
+  font-size: 13vw;
+  margin-left: 4%;
+}
+
+p{
+  font-size: 3.5vw;
+  margin-left: 5%;
+}
+
+.main-nav{
+  font-size: 3.5vw;
+}
+
+
 }
