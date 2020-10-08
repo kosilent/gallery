@@ -8,7 +8,6 @@
 
   }
 
-
 h1 {
   margin-left: 8vw;
   margin-top: 11vw;
@@ -16,9 +15,21 @@ h1 {
   font-weight: lighter;
   color: white;
   font-family: 'Abril Fatface', cursive;
-  font-size: 4.8rem;
+  font-size: 5em;
   animation: text2 1s 1;
 }
+
+p {
+  margin-left: 10vw;
+  color: black;
+  font-family: 'Nanum Myeongjo', serif;
+  /*line-height: 1.4;*/
+  font-size: 1.2em;
+  /*text-shadow: 1px 0.5px 0.5px gray;*/
+  animation: fadein 3s;
+
+}
+
 
 @keyframes text2 {
   0% {margin-top: 0vw;
@@ -33,22 +44,12 @@ h1 {
 
 }
 
-
-
 .textShadow2{
   animation: fadein 5s;
 }
 
-p {
-  margin-left: 10vw;
-  color: black;
-  font-family: 'Nanum Myeongjo', serif;
-  /*line-height: 1.4;*/
-  font-size: 1.2rem;
-  /*text-shadow: 1px 0.5px 0.5px gray;*/
-  animation: fadein 3s;
 
-}
+
 
 
 @keyframes fadein {
@@ -62,7 +63,7 @@ p {
 
 .main-nav{
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   text-transform: uppercase;
   margin-top: 54px;
   list-style: none;
@@ -107,6 +108,7 @@ p {
 
 
 
+
 .Biographytitle{
   margin-left: 11vw;
   color: white;
@@ -129,6 +131,10 @@ p {
   animation: fadein 2.5s;
   font-weight: 300;
 }
+
+
+
+
 /* 가게 정보와 지도 */
 
 .location-info {
