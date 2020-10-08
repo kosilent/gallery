@@ -24,7 +24,7 @@ p {
   color: black;
   font-family: 'Nanum Myeongjo', serif;
   /*line-height: 1.4;*/
-  font-size: 1.2rem;
+  font-size: 1.5vw;
   /*text-shadow: 1px 0.5px 0.5px gray;*/
   animation: fadein 3s;
 
@@ -66,6 +66,7 @@ p {
   font-size: 1.2em;
   text-transform: uppercase;
   margin-top: 54px;
+  margin-right: 10vw;
   list-style: none;
 }
 
@@ -80,6 +81,8 @@ p {
 .main-nav a:hover {
   color: #0bd;
 }
+
+
 .wrapper{
   max-width: 1rem;
   margin-left: 53vw;
