@@ -15,7 +15,7 @@ h1 {
   font-weight: lighter;
   color: white;
   font-family: 'Abril Fatface', cursive;
-  font-size: 5em;
+  font-size: 5rem;
   animation: text2 1s 1;
 }
 
@@ -24,7 +24,7 @@ p {
   color: black;
   font-family: 'Nanum Myeongjo', serif;
   /*line-height: 1.4;*/
-  font-size: 1.2em;
+  font-size: 1.2rem;
   /*text-shadow: 1px 0.5px 0.5px gray;*/
   animation: fadein 3s;
 
@@ -71,6 +71,7 @@ p {
 
 .main-nav li {
   margin-left: 3rem;
+  margin-right: auto;
 }
 .main-nav a {
   color: black;
