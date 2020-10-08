@@ -190,7 +190,7 @@ footer p {
 @media (max-width: 600px) {
 
 h1{
-  font-size: 30px;
+  font-size: 45px;
   margin-left: 4%;
 }
 
@@ -204,12 +204,16 @@ p{
 }
 
 .Biographytitle{
-  font-size: 1.5rem;
+  margin-left: 6vw;
+  font-size: 1.3rem;
 
 }
 
 .Biographytext{
-  font-size: 1rem;
+  margin-left: 6vw;
+  font-size: 0.70rem;
+  white-space:normal;
+
 
 }
 
