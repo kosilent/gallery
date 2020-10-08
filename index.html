@@ -35,7 +35,36 @@
       <p class="textShadow2">누구에게 편안히 다가가서 가만가만 그의 이야기를 들어주고,</p>
       <p class="textShadow2">마음의 색을 조금씩 보여주고 싶은 바램입니다.</p>
 
+
+
+      <style>
+      body
+      .center {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+      input[id="menuicon"] {display:none;}
+      input[id="menuicon"] + label {display:block;width:60px;height:40px;position:relative;cursor:pointer;}
+      input[id="menuicon"] + label span {display:block;position:absolute;width:100%;height:5px;border-radius:30px;background:#000;transition:all .35s;}
+      input[id="menuicon"] + label span:nth-child(1) {top:0;}
+      input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);} /* �����ϰ� ������ �� �ִ� style top:calc(50% - 2.5px); margin-top:-2.5px;*/
+      input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+      input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+      input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+      input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+      </style>
+
+      <div class="center">
+      <input type="checkbox" id="menuicon">
+      <label for="menuicon">
+      	<span></span>
+      	<span></span>
+      	<span></span>
+      </label>
+      </div>
+
+
+
     </div><!--/#home-->
+
+
 
           <footer>
                 <p><small>&copy; 2020 Jun's Atlier</small></p>
