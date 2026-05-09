@@ -1,301 +1,73 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+text-shadow: 1px 1px 1px black;
+animation: fadein 1s;
+font-weight: 400;
 
-:root {
-  --ink: #1a1814;
-  --muted: #7a766e;
-  --faint: #c8c4bc;
-  --bg: #f8f6f2;
-  --white: #ffffff;
-  --accent: #3d3530;
-  --rule: #dedad4;
-  --serif: 'Cormorant Garamond', 'Nanum Myeongjo', serif;
-  --sans: 'Noto Sans KR', sans-serif;
 }
 
-html { font-size: 16px; }
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-weight: 300;
-  line-height: 1.8;
-  min-height: 100vh;
-  overflow-x: hidden;
+.Biographytext{
+margin-left: 10vw;
+color: white;
+font-family: 'Nanum Gothic', sans-serif;
+line-height: 2;
+font-size: 1.25rem;
+animation-delay: 1s;
+animation: fadein 2.5s;
+font-weight: 300;
 }
 
-/* ── NAV ── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4rem 3.5rem;
-  background: rgba(248, 246, 242, 0.88);
-  backdrop-filter: blur(12px);
-  border-bottom: 0.5px solid var(--rule);
+
+
+
+/* 가게 정보와 지도 */
+
+.location-info {
+width: 40%;
+display: flex;
+justify-content: space-between;
+padding-left: 10%;
+padding-right: 10%
 }
 
-.nav-logo {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: var(--ink);
-  text-decoration: none;
-}
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2.8rem;
-}
 
-.nav-links a {
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover,
-.nav-links a.active { color: var(--ink); }
-
-/* ── HERO ── */
-.hero {
-  padding-top: 7rem;
-  padding-bottom: 5rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.hero-eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 400;
-  margin-bottom: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.hero-eyebrow::after {
-  content: '';
-  display: block;
-  width: 2.5rem;
-  height: 0.5px;
-  background: var(--faint);
-}
-
-.hero-name {
-  font-family: var(--serif);
-  font-size: clamp(3.2rem, 8vw, 6.5rem);
-  font-weight: 300;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  margin-bottom: 0.3rem;
-}
-
-.hero-name em {
-  font-style: italic;
-  font-weight: 300;
-  color: var(--muted);
-}
-
-.hero-sub {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-style: italic;
-  color: var(--muted);
-  font-weight: 300;
-  letter-spacing: 0.03em;
-  margin-top: 1rem;
-}
-
-/* ── DIVIDER ── */
-.section-divider {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 3.5rem;
-  border: none;
-  border-top: 0.5px solid var(--rule);
-}
-
-/* ── CONTENT GRID ── */
-.content-wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 3.5rem;
-}
-
-/* ── TIMELINE BLOCK ── */
-.section {
-  padding: 4rem 0;
-  border-bottom: 0.5px solid var(--rule);
-}
-
-.section:last-of-type { border-bottom: none; }
-
-.section-header {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-.section-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--faint);
-  font-weight: 400;
-  padding-top: 0.15rem;
-}
-
-.timeline { width: 100%; }
-
-.timeline-row {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 1.6rem;
-  padding: 0.7rem 0;
-  border-top: 0.5px solid transparent;
-  transition: border-color 0.2s;
-}
-
-.timeline-row:hover {
-  border-top-color: var(--rule);
-}
-
-.timeline-year {
-  font-family: var(--serif);
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--faint);
-  letter-spacing: 0.04em;
-  padding-top: 0.05rem;
-}
-
-.timeline-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.timeline-title {
-  font-size: 0.88rem;
-  font-weight: 400;
-  color: var(--ink);
-  line-height: 1.55;
-}
-
-.timeline-venue {
-  font-size: 0.78rem;
-  color: var(--muted);
-  font-weight: 300;
-}
-
-.timeline-tag {
-  display: inline-block;
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border: 0.5px solid var(--rule);
-  padding: 0.15em 0.5em;
-  border-radius: 2px;
-  margin-top: 0.25rem;
-  align-self: flex-start;
-}
-
-/* ── PROFILE ── */
-.profile-grid {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-.bio-facts {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.bio-fact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.bio-fact-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-
-.bio-fact-value {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: var(--ink);
-}
-
-/* ── FOOTER ── */
+/* 푸터 ----------------------------- */
 footer {
-  max-width: 900px;
-  margin: 4rem auto 0;
-  padding: 2rem 3.5rem;
-  border-top: 0.5px solid var(--rule);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+margin-bottom: 3rem;
+
 }
 
-.footer-copy {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: var(--faint);
+footer p {
+margin-top: 15vw;
+font-size: 1rem;
+color: white;
 }
 
-.footer-mark {
-  font-family: var(--serif);
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--faint);
-  font-style: italic;
+
+.grid {
+display: grid;
+gap: 26px;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+margin-top: 6%;
+margin-bottom: 50px;
 }
 
-/* ── FADE IN ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
+
+
+
+
+
+
+/* 모바일 버전 */
+@media (max-width: 600px) {
+
+h1{
+font-size: 45px;
+margin-left: 4%;
+}
+ 
+ .textShadow1  {
+  font-size: 2.1rem;
 }
 
-.hero-eyebrow { animation: fadeUp 0.7s ease both 0.1s; }
-.hero-name    { animation: fadeUp 0.7s ease both 0.25s; }
-.hero-sub     { animation: fadeUp 0.7s ease both 0.4s; }
-
-/* ── MOBILE ── */
-@media (max-width: 640px) {
-  nav { padding: 1.2rem 1.5rem; }
-  .nav-links { gap: 1.5rem; }
-  .hero, .content-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
-  .section-divider { padding: 0 1.5rem; }
-  .section-header, .profile-grid { grid-template-columns: 1fr; gap: 1rem; }
-  .section-label { display: none; }
-  footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
-}
+p{
+font-size: 3.5vw;
